@@ -9,10 +9,10 @@ library(Rfast)
 #API reference
 #https://api.census.gov/data/2010/dec/sf1/variables.html
 
-ct2010.sex.and.age <- sf::st_read(dsn = "D:/Users/climate_dashboard/Documents/SuperPANCHO/data/input_files/Census/ACS_2018_5YR_TRACT.gdb", layer = "X01_AGE_AND_SEX")
+#ct2010.sex.and.age <- sf::st_read(dsn = "D:/Users/climate_dashboard/Documents/SuperPANCHO/data/input_files/Census/ACS_2018_5YR_TRACT.gdb", layer = "X01_AGE_AND_SEX")
 
 #total pop is B01001e1
-ct2010 <- rgdal::readOGR(dsn="D:/Users/climate_dashboard/Documents/SuperPANCHO/data/input_files/Census/ACS_2018_5YR_TRACT.gdb", layer="ACS_2018_5YR_TRACT")
+ct2010 <- rgdal::readOGR(dsn="D:/UCS_projects/climate_shop/SuperPANCHO/data/input/Census/ACS_2018_5YR_TRACT.gdb", layer="ACS_2018_5YR_TRACT")
 #full.county.fips.list <- unique(paste(ct2010$STATEFP, ct2010$COUNTYFP, sep=""))
 state.fips.list <- unique(ct2010$STATEFP)
 counties.sp <- rgdal::readOGR(dsn="D:/Users/climate_dashboard/Documents/SuperPANCHO/data/input_files/Census/tlgdb_2019_a_us_substategeo.gdb", layer="County")
